@@ -47,6 +47,7 @@ package to use the logo at various sizes.
 %{_texmfdistdir}/fonts/type1/public/recycle/recycle.pfb
 %{_texmfdistdir}/tex/latex/recycle/recycle.sty
 %doc %{_texmfdistdir}/doc/fonts/recycle/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +58,5 @@ package to use the logo at various sizes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
