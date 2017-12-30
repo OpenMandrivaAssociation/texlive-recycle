@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-recycle
-Version:	20091110
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	A font providing the "recyclable" logo
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/recycle
