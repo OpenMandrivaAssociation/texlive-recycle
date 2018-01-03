@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/recycle
-# catalog-date 2009-11-10 00:30:52 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-recycle
 Version:	20170414
 Release:	1
@@ -33,12 +27,12 @@ package to use the logo at various sizes.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/map/dvips/recycle/recycle.map
-%{_texmfdistdir}/fonts/source/public/recycle/recycle.mf
-%{_texmfdistdir}/fonts/tfm/public/recycle/recycle.tfm
-%{_texmfdistdir}/fonts/type1/public/recycle/recycle.pfb
-%{_texmfdistdir}/tex/latex/recycle/recycle.sty
-%doc %{_texmfdistdir}/doc/fonts/recycle/README
+%{_texmfdistdir}/fonts/map/dvips/recycle
+%{_texmfdistdir}/fonts/source/public/recycle
+%{_texmfdistdir}/fonts/tfm/public/recycle
+%{_texmfdistdir}/fonts/type1/public/recycle
+%{_texmfdistdir}/tex/latex/recycle
+%doc %{_texmfdistdir}/doc/fonts/recycle
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,17 +43,3 @@ package to use the logo at various sizes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091110-2
-+ Revision: 755651
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091110-1
-+ Revision: 719441
-- texlive-recycle
-- texlive-recycle
-- texlive-recycle
-- texlive-recycle
-
