@@ -1,5 +1,5 @@
 Name:		texlive-recycle
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A font providing the "recyclable" logo
 Group:		Publishing
