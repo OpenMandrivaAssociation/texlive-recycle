@@ -1,6 +1,6 @@
 Name:		texlive-recycle
 Version:	15878
-Release:	1
+Release:	2
 Summary:	A font providing the "recyclable" logo
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/recycle
