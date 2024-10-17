@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A font providing the "recyclable" logo
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/recycle
+URL:		https://www.ctan.org/tex-archive/fonts/recycle
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.doc.r%{version}.tar.xz
