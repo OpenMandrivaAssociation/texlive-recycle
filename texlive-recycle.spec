@@ -1,45 +1,21 @@
-Name:		texlive-recycle
-Version:	15878
-Release:	2
-Summary:	A font providing the "recyclable" logo
+%global tl_name recycle
+%global tl_revision 15878
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
+Summary:	A font providing the recyclable logo
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/fonts/recycle
-License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.doc.r%{version}.tar.xz
+License:	gpl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/recycle.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This single-character font is provided as MetaFont source, and
-in Adobe Type 1 format. It is accompanied by a trivial LaTeX
-package to use the logo at various sizes.
+This single-character font is provided as Metafont source, and in Adobe
+Type 1 format. It is accompanied by a trivial LaTeX package to use the
+logo at various sizes.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/map/dvips/recycle
-%{_texmfdistdir}/fonts/source/public/recycle
-%{_texmfdistdir}/fonts/tfm/public/recycle
-%{_texmfdistdir}/fonts/type1/public/recycle
-%{_texmfdistdir}/tex/latex/recycle
-%doc %{_texmfdistdir}/doc/fonts/recycle
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
